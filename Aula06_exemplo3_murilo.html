@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos - Exemplo 3</title>
+    <style>
+        img {
+            width: 130px;
+            height: 150px
+        }
+    </style>
+</head>
+
+<body>
+    <p>Passe o cursor do mouse sobre as imagens abaixo:</p>
+    <img id="bt" src="minion.jpg" class="minion">
+    <img id="sh" src="minion.jpg" class="minion">
+    <img id="mm" src="minion.jpg" class="minion"><br>
+    <img id="hf" src="minion.jpg" class="minion">
+    <img id="hk" src="minion.jpg" class="minion">
+    <img id="ca" src="minion.jpg" class="minion">
+
+    <script>
+        var images = document.querySelectorAll('.minion');
+
+        for (let i = 0; i < images.length; i++) {
+            images[i].addEventListener('mouseover', muda);
+            images[i].addEventListener('mouseout', muda);
+        }
+
+        function muda(e) {
+            var imagem = document.getElementById(e.target.id);
+            if (e.type == 'mouseover')
+                imagem.src = "minion" + e.target.id + ".jpg"
+            else
+                imagem.src = "minion.jpg"    
+        }
+        
+    </script>
+</body>
+
+</html>

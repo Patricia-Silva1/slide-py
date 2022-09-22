@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Eventos - Exemplo 5</title>
+    </head>
+    <body>
+        <div style="margin-left: 30px;">
+            <h1>Conta</h1>
+            Entrada:<br>
+            <input type="number" id="en" onchange="calcular()"><br>
+            Refeição:<br>
+            <input type="number" id="pp" onchange="calcular()"><br>
+            Sobremesa:<br>
+            <input type="number" id="sb" onchange="calcular()"><br>
+            Bebida:<br>
+            <input type="number" id="gr" onchange="calcular()"><br>
+            <br>
+            <p>Total do consumo:<br>
+               Gorjeta (10%):<br>
+               Valor a pagar:</p>
+        </div>
+
+<script>
+    let en = document.getElementById("en");
+
+    let pp=document.getElementById("pp");
+
+    let sp=document.getElementById("sp");
+
+    let gr=document.getElementById("gr");
+
+    
+
+     entrada.addevetlistener("change",somar);
+     refeiçao.addevetlistener("change",somar);
+     sobremesa.addevetlistener("change",somar);
+     bebida.addevetlistener("change",somar);
+
+     function somar(){
+         let valorentrada = en.value;
+         let valorrefeiçao = pp.value;
+         let valorsobremesa = sp.value;
+         let valorbebida = gr.value;
+
+         let valortotal= valorentrada + valorrefeiçao + valorsobremesa + valorbebida;
+
+         console.log("valorentrada");
+         document
+
+     }
+
+            
+
+
+        </script>
+    </body>
+</html>

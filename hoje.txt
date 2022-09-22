@@ -1,0 +1,85 @@
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+
+import TaskItem from './component/TaskItem';
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <StatusBar style="auto" />
+      <View style={styles.content}>
+        <TextInput
+          style={styles.input}
+          placeholder='Digite a tarefa' />
+        <TouchableOpacity
+          style={[styles.btn, { backgroundColor: '#3F8CCC' }]}>
+          <Text style={styles.btnText}>+</Text>
+        </TouchableOpacity>
+      </View>
+      <View style={{ flex: 1, width: '80%' }}>
+        <TaskItem />
+        <TaskItem />
+        <TaskItem />
+        
+      </View>
+
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    backgroundColor: '#EBE4C4'
+  },
+  content: {
+    marginTop: 30,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    width: '80%'
+  },
+  input: {
+    borderColor: '#F3BA42',
+    backgroundColor: '#FFF',
+    borderWidth: 1,
+    borderRadius: 7,
+    fontSize: 18,
+    width: 270,
+    paddingLeft: 15,
+    shadowOffset: {
+      width: 2,
+      height: 2
+    }
+  },
+  btn: {
+    width: 30,
+    borderRadius: 15,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginLeft: 15,
+    shadowOffset: {
+      width: 2,
+      height: 2
+    }
+  },
+  btnText: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#EBE4C4'
+  },
+  taskContent: {
+    marginTop: 30,
+    flexDirection: 'row',
+    padding: 15,
+    backgroundColor: '#F3BA42',
+    borderRadius: 8,
+  },
+  txtTarefa: {
+    width: '90%',
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#000'
+  }
+});
